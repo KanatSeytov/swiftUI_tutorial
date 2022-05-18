@@ -10,27 +10,35 @@ import SwiftUI
 struct ContentView: View {
     @State var isError = false
     @State var count = 0
+    @State var lite = 0
+    var texts = ["text 1","text 2","text 3", "text 4"]
     var body: some View {
-        VStack {
-            ZStack{
-                HStack{
-                VStack{
-                    Text("Content1")
-                    Text("Content2")
-                    Spacer().frame(height: 400)
-                }
-                    Spacer()
-                }
-                Rectangle().fill(Color.blue).offset(x:  isError ? 100: 0)
+        NavigationView{
+            Form{
+                Picker(selection: $count, label: Text("Text"), content: {
+                    ForEach(0..<texts.count){
+                        Text(self.texts[$0])
+                    }
+                })
                 
-                Text("Text inside the rectangle").offset(x:  isError ? 100: 0)
-            }.animation(.spring(response: 0.4, dampingFraction: 0.6, blendDuration: 0.4))
-            Toggle(isOn: $isError, label: {
-                Text("Text")
-            }).padding();
+                Toggle(isOn: $isError){
+                    Text("Avia").foregroundColor(isError ? Color.blue : Color.gray)
+                    
+                }
+                
+                Picker(
+                    selection:
+                        $lite,
+                    label:Text("Lite"),
+                    content: {
+                        ForEach(0..<101){
+                        Text("\($0)")
+                    }
+                })
+                
+                Text("The result of picker \(texts[count])")
+            }.navigationTitle(Text("Settings"))
         }
-        
-         
     }
 }
 
