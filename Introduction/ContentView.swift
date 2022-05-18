@@ -8,37 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isError = false
-    @State var count = 0
-    @State var lite = 0
-    var texts = ["text 1","text 2","text 3", "text 4"]
+    @State var segIdx = 0
+    @State var offset: Float = 0
+    var companies = ["Nike", "Puma", "Adidas"]
     var body: some View {
-        NavigationView{
-            Form{
-                Picker(selection: $count, label: Text("Text"), content: {
-                    ForEach(0..<texts.count){
-                        Text(self.texts[$0])
-                    }
-                })
-                
-                Toggle(isOn: $isError){
-                    Text("Avia").foregroundColor(isError ? Color.blue : Color.gray)
+        VStack{
+            Text("Cross from \(companies[segIdx])").font(Font.system(.title))
+            ZStack{
+                RoundedRectangle(cornerRadius: 10).fill(Color.gray)
+                    .frame(width: 320, height: 320)
+                    .padding()
                     
+                Image(companies[segIdx]).resizable().frame(width: 300, height: 300)
+                    .offset(x: CGFloat(self.offset))
+            }.offset(x: CGFloat(self.offset)).animation(.spring(response: 0.4, dampingFraction: 0.6, blendDuration: 0.4))
+            
+            Picker(selection: Binding(get: {
+                    self.segIdx
+            }, set: {newValue in
+                
+                self.offset = -500
+                self.segIdx = newValue
+                moveBack()
+            }), content: {
+                ForEach(0..<companies.count){
+                    Text(self.companies[$0]).tag($0)
                 }
-                
-                Picker(
-                    selection:
-                        $lite,
-                    label:Text("Lite"),
-                    content: {
-                        ForEach(0..<101){
-                        Text("\($0)")
-                    }
-                })
-                
-                Text("The result of picker \(texts[count])")
-            }.navigationTitle(Text("Settings"))
+            }, label: {Text("Companies")}).pickerStyle(SegmentedPickerStyle()).padding()
+            Spacer().frame(height: 100)
         }
+    }
+    
+    private func moveBack(){
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+            self.offset = 0
+        })
     }
 }
 

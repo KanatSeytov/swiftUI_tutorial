@@ -19,6 +19,9 @@
 		E4353B6628328E7200713E31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4353B6828328E7400713E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4353B6B28328E7400713E31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4353B742835751E00713E31 /* Puma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Puma.png; sourceTree = "<group>"; };
+		E4353B752835751E00713E31 /* Adidas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Adidas.png; sourceTree = "<group>"; };
+		E4353B762835751E00713E31 /* Nike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nike.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,9 @@
 			children = (
 				E4353B6428328E7200713E31 /* IntroductionApp.swift */,
 				E4353B6628328E7200713E31 /* ContentView.swift */,
+				E4353B752835751E00713E31 /* Adidas.png */,
+				E4353B762835751E00713E31 /* Nike.png */,
+				E4353B742835751E00713E31 /* Puma.png */,
 				E4353B6828328E7400713E31 /* Assets.xcassets */,
 				E4353B6A28328E7400713E31 /* Preview Content */,
 			);
