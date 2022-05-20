@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E4353B6528328E7200713E31 /* IntroductionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4353B6428328E7200713E31 /* IntroductionApp.swift */; };
-		E4353B6728328E7200713E31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4353B6628328E7200713E31 /* ContentView.swift */; };
 		E4353B6928328E7400713E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4353B6828328E7400713E31 /* Assets.xcassets */; };
 		E4353B6C28328E7400713E31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4353B6B28328E7400713E31 /* Preview Assets.xcassets */; };
+		E4B54AB428371D18001B6205 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B54AB328371D18001B6205 /* ActivityView.swift */; };
+		E4B54AB528372690001B6205 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4353B6628328E7200713E31 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E4353B742835751E00713E31 /* Puma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Puma.png; sourceTree = "<group>"; };
 		E4353B752835751E00713E31 /* Adidas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Adidas.png; sourceTree = "<group>"; };
 		E4353B762835751E00713E31 /* Nike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nike.png; sourceTree = "<group>"; };
+		E4B54AB328371D18001B6205 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E4353B742835751E00713E31 /* Puma.png */,
 				E4353B6828328E7400713E31 /* Assets.xcassets */,
 				E4353B6A28328E7400713E31 /* Preview Content */,
+				E4B54AB328371D18001B6205 /* ActivityView.swift */,
 			);
 			path = Introduction;
 			sourceTree = "<group>";
@@ -143,8 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4353B6728328E7200713E31 /* ContentView.swift in Sources */,
 				E4353B6528328E7200713E31 /* IntroductionApp.swift in Sources */,
+				E4B54AB428371D18001B6205 /* ActivityView.swift in Sources */,
+				E4B54AB528372690001B6205 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +279,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Introduction/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -287,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kolesa.Introduction;
+				PRODUCT_BUNDLE_IDENTIFIER = Introduction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Introduction/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -315,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kolesa.Introduction;
+				PRODUCT_BUNDLE_IDENTIFIER = Introduction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
