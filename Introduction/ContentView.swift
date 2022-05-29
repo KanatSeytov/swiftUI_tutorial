@@ -46,28 +46,27 @@ class Classes: ObservableObject{
 }
 
 struct ContentView: View {
-    @State var isSharePresented = false
-    @ObservedObject var classes = Classes()
-    @State var selector: String?
-    let math = "math"
-    let physics = "physics"
     
     var body: some View {
-        NavigationView{
-            VStack(spacing: 20){
-                
-                Text("You have \(classes.classes) classes ")
-                    
-                NavigationLink(destination: MyView(text: math), tag: "act1", selection: $selector, label:{Text(math)})
-                NavigationLink(destination: MyView(text: physics), tag: "act2", selection: $selector, label:{Text(physics)})
-                
-                
-                
-                    .navigationBarTitle("Potential")
-            }
+        TabView {
+            ExtractedView()
+                .badge(10)
+                .tabItem {
+                    Image(systemName: "1.square.fill")
+                    Text("First")
+                }
+            Text("Another Tab")
+                .tabItem {
+                    Image(systemName: "2.square.fill")
+                    Text("Second")
+                }
+            Text("The Last Tab")
+                .tabItem {
+                    Image(systemName: "3.square.fill")
+                    Text("Third")
+                }
         }
-        .environmentObject(classes)
-        
+        .font(.headline)
         
     }
 }
@@ -75,5 +74,16 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct ExtractedView: View {
+    var body: some View {
+        ZStack{
+            Color.red
+            Text("The First Tab")
+        }
+        
+            
     }
 }
